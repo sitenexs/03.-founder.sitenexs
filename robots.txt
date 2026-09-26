@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: founder.sitenexs.site
+Sitemap: https://founder.sitenexs.site/sitemap.xml
