@@ -135,7 +135,7 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.5rem;
             font-weight: 800;
             font-size: 1.1rem;
         }
@@ -146,12 +146,10 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Logo Asli */
         .logo-img {
-            height: 28px;
+            height: 32px;
             width: auto;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-full);
-            padding: 2px;
             object-fit: contain;
         }
 
@@ -245,6 +243,13 @@
             animation: floatBadge 4s ease-in-out infinite;
         }
 
+        .founder-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         .founder-info .badge {
             display: inline-flex;
             align-items: center;
@@ -259,6 +264,7 @@
             margin-bottom: 1rem;
         }
 
+        /* Nama di tengah presisi */
         .founder-name {
             font-size: 2.1rem;
             font-weight: 800;
@@ -266,6 +272,24 @@
             color: var(--text-main);
             margin-bottom: 0.3rem;
             line-height: 1.2;
+            text-align: center;
+            width: 100%;
+        }
+
+        .founder-name-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Icon Verified kecil & sangat dekat di samping kanan nama */
+        .verification-icon {
+            width: 15px;
+            height: 15px;
+            object-fit: contain;
+            position: absolute;
+            left: calc(100% + 4px);
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .founder-title-role {
@@ -279,11 +303,13 @@
             font-size: 0.95rem;
             color: var(--text-muted);
             margin-bottom: 1.25rem;
+            max-width: 600px;
         }
 
         .founder-meta {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 1.25rem;
             margin-bottom: 1.5rem;
             font-size: 0.85rem;
@@ -299,6 +325,7 @@
 
         .founder-socials {
             display: flex;
+            justify-content: center;
             gap: 0.6rem;
         }
 
@@ -430,16 +457,11 @@
                 max-width: 320px;
                 margin: 0 auto;
             }
-            .founder-info .badge, 
-            .founder-meta, 
-            .founder-socials {
-                justify-content: center;
+            .founder-name {
+                font-size: 1.8rem; 
             }
             .grid-2, .grid-3 { 
                 grid-template-columns: 1fr; 
-            }
-            .founder-name { 
-                font-size: 1.8rem; 
             }
         }
     </style>
@@ -466,7 +488,7 @@
                 <div class="founder-photo-wrapper animate-fade-in">
                     <div class="founder-photo-card">
                         <div class="founder-img-wrapper">
-                            <img src="https://sitenexs.site/assets/founder/founder.png" alt="Syafaat Nuryadi - Founder & CEO Sitenexs" onerror="this.src='https://sitenexs.site/assets/founder/founder.png">
+                            <img src="https://sitenexs.site/assets/founder/founder.png" alt="Syafaat Nuryadi - Founder & CEO Sitenexs" onerror="this.src='https://sitenexs.site/assets/founder/founder.png'">
                         </div>
                         <div class="founder-badge-floating">
                             <i class="fas fa-shield-check text-accent"></i> Sitenexs Leadership
@@ -478,7 +500,14 @@
                     <div class="badge">
                         <i class="fas fa-certificate text-primary"></i> Kepemimpinan & Visi Strategis
                     </div>
-                    <h1 class="founder-name">Syafaat Nuryadi</h1>
+                    
+                    <h1 class="founder-name">
+                        <span class="founder-name-text">
+                            Syafaat Nuryadi
+                            <img src="https://sitenexs.site/assets/logo/verified.png" alt="Verified" class="verification-icon">
+                        </span>
+                    </h1>
+
                     <div class="founder-title-role">Founder & Chief Executive Officer (CEO) Sitenexs</div>
                     
                     <p class="founder-bio">
@@ -486,7 +515,7 @@
                     </p>
 
                     <div class="founder-meta">
-                        <div><i class="fas fa-location-dot text-primary"></i>Bengkulu, Indonesia</div>
+                        <div><i class="fas fa-location-dot text-primary"></i> Bengkulu, Indonesia</div>
                         <div><i class="fas fa-envelope text-primary"></i> SyafaatNuryadi27@gmail.com</div>
                     </div>
 
@@ -510,7 +539,7 @@
             </div>
 
             <div class="quote-box animate-fade-in animate-delay-1">
-                "Berkarya dengan teknologi, tumbuh dengan inovasi.."   — Syafaat Nuryadi   (Founder Sitenexs)
+                "Berkarya dengan teknologi, tumbuh dengan inovasi.." — Syafaat Nuryadi (Founder Sitenexs)
             </div>
 
             <div class="grid-2 animate-fade-in animate-delay-2" style="margin-top: 2rem;">
@@ -530,7 +559,7 @@
                     </div>
                     <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Misi Utama</h3>
                     <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.7;">
-                        1. Mengembangkan software dan website yang berkualitas serta inovatif..<br>
+                        1. Mengembangkan software dan website yang berkualitas serta inovatif.<br>
                         2. Menciptakan solusi digital yang sederhana, aman, dan efisien.<br>
                         3. Mengutamakan pengalaman pengguna dalam setiap produk yang dikembangkan.<br>
                         4. Terus belajar dan berinovasi mengikuti perkembangan teknologi.<br>
